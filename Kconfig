@@ -1,0 +1,16 @@
+if VENDOR_NFT
+
+choice
+	prompt "Mainboard model"
+
+source "src/mainboard/nefteavtomatika/*/Kconfig.name"
+
+endchoice
+
+source "src/mainboard/nefteavtomatika/*/Kconfig"
+
+config MAINBOARD_VENDOR
+	string
+	default "Nefteavtomatika"
+
+endif # VENDOR_NFT
